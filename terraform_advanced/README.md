@@ -1,7 +1,7 @@
-3. Terraform file
+# 3. Terraform file
 As we are already aware that terraform is a command line tool for creating, updating and versioning infrastructure in the cloud then obviously we want to know how does it do so? Terraform describes infrastructure in a file using the language called Hashicorp Configuration Language (HCL) with the extension of .tf It is a declarative language that describes infrastructure in the cloud. When we write our infrastructure using HCL in .tf file, terraform generates an execution plan that describes what it will do to reach the desired state. Once execution plan is ready, terraform executes the plan and generates a state file by the name terraform.tfstate by default. This file maps resource meta data to the actual resource ID and lets terraform knows what it is managing in the cloud.
 
-4. Terraform and provision AWS
+# 4. Terraform and provision AWS
 To deploy an EC2 instance through terraform create a file with extension .tf This file contains namely two section. The first section declares the provider (in our case it is AWS). In provider section we will specify the access key and secret key that is written in the CSV file which we have downloaded earlier while creating EC2 user. Also choose the region of your choice. The resource block defines what resources we want to create. Since we want to create EC2 instance therefore we specified with "aws instance" and the instance attributes inside it like ami, instance type and tags.
 vi aws.tf
 
@@ -25,7 +25,7 @@ terraform init
 terraform plan
 terraform apply
 
-5. A more complex terraform example
+# 5. A more complex terraform example
 
 Now that, we have understood how to create an EC2 instance using terraform, let us create a bit more advance infrastructure using terraform. Our infrastructure aim includes-
 
