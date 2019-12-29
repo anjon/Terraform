@@ -1,6 +1,6 @@
 # Creating 3 node AWS-EC2 instance for docker swarm 
 resource "aws_instance" "docker_server" {
-  ami = "ami-00068cd7555f543d5"
+  ami = "ami-04b9e92b5572fa0d1"
   count = 3
   key_name = "my-ec2"
   instance_type = "t2.micro"
