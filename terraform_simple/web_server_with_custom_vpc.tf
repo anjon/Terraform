@@ -9,8 +9,8 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
-  access_key = "xxxxxxxxxx"
-  secret_key = "xxxxxxxxxx"
+  access_key = "AKIAIGPMBZQQPBXQNT2A"
+  secret_key = "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"
 }
 
 # 1. Create VPC
@@ -130,3 +130,17 @@ resource "aws_instance" "web" {
     Name = "Web-Server"
   }
 }
+
+output "server_public_ip" {
+    value = aws_eip.one.public_ip
+}
+
+output "server_private_ip" {
+    value = aws_instance.web-instance.private_ip
+}
+
+#terraform state list
+#terraform state show aws.eip.one
+#terraform state show aws_instance.web
+#terraform destroy -target aws_instance.web
+#terraform apply -target aws_instance.web
