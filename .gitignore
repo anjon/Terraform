@@ -1,5 +1,10 @@
+# Mac specific 
 .DS_Store
 
-# .tfstate files
+# Terraform dot files
+.terraform
+.terraformrc
+**/.terraform/*
+.terraform.d
 *.tfstate
 *.tfstate.*
