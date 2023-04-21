@@ -1,8 +1,15 @@
 // Creating S3 Bucket
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+resource "aws_s3_bucket" "upload_queue" {
+  bucket = "upload-queue-anjon"
 
-  bucket = "upload-queue"
-  acl    = "private"
+  tags = {
+    Name = "Upload Queue"
+  }
+}
+
+// Adding S3 Bucket ACL Policy
+resource "aws_s3_bucket_acl" "upload_acl" {
+  bucket = aws_s3_bucket.upload_queue.id
+  acl = "private"
 }
 
