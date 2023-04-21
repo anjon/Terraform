@@ -5,7 +5,7 @@
 .terraform
 .terraformrc
 **/.terraform/*
-.terraform.lock*
+.terraform.lock.hcl
 .terraform.d
 *.tfstate
 *.tfstate.*
