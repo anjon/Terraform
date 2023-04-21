@@ -5,6 +5,7 @@
 .terraform
 .terraformrc
 **/.terraform/*
+.terraform.lock*
 .terraform.d
 *.tfstate
 *.tfstate.*
