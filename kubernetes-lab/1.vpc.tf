@@ -3,7 +3,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "k8s_vpc"
+  name = "k8s-vpc"
   cidr = "10.0.0.0/16"
 
   azs             = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
@@ -14,6 +14,6 @@ module "vpc" {
   enable_vpn_gateway = true
 
   tags = {
-    Name = "K8S"
+    Name = "k8s-lab"
   }
 }
