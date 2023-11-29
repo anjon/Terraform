@@ -14,6 +14,4 @@ terraform {
 
 provider "aws" {
   region                   = "eu-central-1"
-  shared_credentials_files = ["/Users/anjon/.aws/credentials"]
-  profile                  = "vscode"
 }
