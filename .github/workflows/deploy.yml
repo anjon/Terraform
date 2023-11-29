@@ -1,0 +1,9 @@
+name: Terraform CI CD Pipeline for Deploying AWS VPC moduler
+run-name: ${{ github.actor }} has triggered the pipeline
+
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
